@@ -1,1 +1,1 @@
-# Staycation
+# Mini air-bnb
