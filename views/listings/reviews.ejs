@@ -1,0 +1,27 @@
+<% layout('/layouts/boilerplate') %>
+<div class="row">
+    <h1 class="text-center">Add Review</h1>
+    <div class="card mb-3">
+        <img src="<%= listing.image %>" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"><%= listing.name %></h5>
+            <p class="card-text"><%= listing.description %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item text-muted"><%= listing.location %></li>
+            <li class="list-group-item">₱<%= listing.price %>/night</li>
+        </ul>
+    <div class="col-12 offset-0">
+        <form action="/listings/<%= listing._id %>?_method=PUT" method="post">
+            <div class="mb-3">
+                <label class="form-label" for="review">  </label>
+                <textarea class="form-control" type="review" id="review" placeholder="Tell people about your experience: describe the place or activity, recommendations for travellers?"
+                    name="listing[review]"><%= listing.review  %></textarea>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Submit</button>
+                <a class="btn btn-danger" href="/listings/<%= listing._id %>">Cancel</a>
+            </div>
+
+    </div>
+</div>
