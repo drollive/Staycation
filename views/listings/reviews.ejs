@@ -13,10 +13,14 @@
         </ul>
     <div class="col-12 offset-0">
         <form action="/listings/<%= listing._id %>?_method=PUT" method="post">
+            <div class="mb-2">
+                <label class="form-label" for="username"></label>
+                <input class="form-control" type="text" id="username" placeholder="Please Indicate Your Name" name="listing[username]">
+            </div>
             <div class="mb-3">
                 <label class="form-label" for="review">  </label>
                 <textarea class="form-control" type="review" id="review" placeholder="Tell people about your experience: describe the place or activity, recommendations for travellers?"
-                    name="listing[review]"><%= listing.review  %></textarea>
+                    name="listing[review]"><%= listing.review %></textarea>
             </div>
             <div class="mb-3">
                 <button class="btn btn-success">Submit</button>

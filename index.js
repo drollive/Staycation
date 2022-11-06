@@ -47,6 +47,7 @@ app.get('/listings/:id/reviews', async (req, res) => {
     res.render('listings/reviews', {listing});
 })
 
+
 // Form to update listing
 app.get('/listings/:id/edit', async (req, res) => {
     const listing = await Listing.findById(req.params.id);

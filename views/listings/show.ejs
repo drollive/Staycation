@@ -24,4 +24,23 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card mb-3">
+                <div class = "card-body">
+                    <h2 class="card-title"> Reviews</h2>
+                </div>
+                <% if (listing.review == null) {%> 
+                <ul>
+                    <p>No reviews yet</p>
+                </ul>
+                    <% } else { %>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-muted">Username:<%= listing.username %></li>
+                    <p class="offset-3"><%= listing.review %></p>
+                </ul>
+                <% } %>
+            </div>
+        </div>
+    </div>
 </div>
